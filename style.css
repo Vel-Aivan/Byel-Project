@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Century Gothic',sans-serif;
+    background-color: rgb(43, 42, 42);
+    padding: 10px;
+}
+
+header 
+{
+    width: 100%;
+    background-color: rgb(51, 51, 51);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.rating {
+    background-color: rgb(51, 51, 51);
+    margin-top: 20px;
+    width: 20%;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: rgb(86, 150, 223);
+}
+.title,nav ul li a, label {
+    color: rgb(86, 150, 223);
+}
+
+label {
+    display: none;
+}
+
+nav li{
+    transition: 0.2s;
+}
+
+nav li {
+    padding: 5px 5px;
+    transition: 0.1s;
+}
+
+nav ul {
+    display: flex;
+    gap:3rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.2s;
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: rgb(180, 208, 252);
+}
+
+.x i {
+    padding: 5px;
+    border-radius: 5px;
+}
+.x i:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+.left {
+    float: left;
+    width: 70%;
+    color: rgb(86, 150, 223);
+}
+.right {
+    float: left;
+    width: 30%;    
+    padding-left: 20px;
+    color: rgb(86, 150, 223);
+}
+.right i {
+    font-size: 30px;
+    color: rgb(85, 84, 84);
+    transition: 0.2s;
+}
+.right i:hover {
+    color: rgb(107, 107, 107);
+}
+.media {
+    display: flex;
+    gap: 1.5rem;
+}
+.card {
+    margin-top: 20px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 10px;
+    padding: 20px;
+}
+.col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10px;
+}
+
+.left img {
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+p {
+    font-weight: bolder;
+}
+
+.main {
+    content: '';
+    display: table;
+    clear: both;
+}
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    color: rgb(86, 150, 223);
+    text-align: center;
+}
+@media screen and (max-width:490px) {
+    label{
+        display: block;
+    }
+
+    header h1 {
+        font-size: 120%;
+    }
+
+    nav {
+        width: 150px;
+        position: absolute;
+        background-color: rgb(51, 51, 51);
+        top: 0px;
+        right: -1px;
+        padding: 10px;
+        border-radius: 5px;
+        visibility: hidden;
+        opacity: 0;
+    }
+    nav ul li a{
+        color: #89ABE3FF;;
+    }
+
+    nav li:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    #h:hover {
+        color: #fff;
+    }
+
+    nav label {
+        text-align: right;
+        color:#89ABE3FF;;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+     #h {
+        font-size: 17%;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    input:checked ~ nav {
+        visibility: visible;
+        opacity: 1;
+    }
+    .left img {
+        max-width: 100%;  
+    }
+    .left {
+        text-align: none;
+    }
+}
+@media screen and (max-width:1000px) {
+   
+    .left {
+        float: none;
+        width: 100%;
+    }
+    .col {
+        display: block;
+    }
+    .right {
+        width: 100%;
+        padding: 0;
+    }
+    .rating {
+        width: 100%;
+    }
+}@media screen and (max-width:999px) {
+   
+    .left img {
+        min-width: 70%;
+    }
+}
